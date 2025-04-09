@@ -8,7 +8,7 @@ def getdata(url):
   return r.text
 
 # URL getdata functionand convert that data into HTML code
-htmldata = getdata("https://covid-19tracker.milkeninstitute.org/")
+htmldata = getdata("https://web.archive.org/web/20230622190957/https://covid-19tracker.milkeninstitute.org/")
 # Parse the HTML code using BeautifulSoup
 soup = BeautifulSoup(htmldata, 'html.parser')
 # Extract the data from the HTML code
