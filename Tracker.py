@@ -11,6 +11,11 @@ def getdata(url):
 htmldata = getdata("https://web.archive.org/web/20230622190957/https://covid-19tracker.milkeninstitute.org/")
 # Parse the HTML code using BeautifulSoup
 soup = BeautifulSoup(htmldata, 'html.parser')
+
 # Extract the data from the HTML code
 res = soup.find_all('div', class_='is_h5-2 is_developer w-richtext')
-print(str(res))
+
+# Iterate through the elements and print their text content
+for i, element in enumerate(res):
+    print(f"No {i + 1}: {element.text.strip()}")
+
